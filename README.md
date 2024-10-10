@@ -6,4 +6,33 @@ Grupo: Luciano Damitz Pinheiro, Douglas Francisco Bolina Sibuya
 
 
 ## Tutorial
-O programa será feito em Python e será utilizada a biblioteca Tkinter para confecção de sua interface gráfica. Ao abrir o programa, o usuário terá as seguintes opções: despesas, receitas, dinheiro guardado e informações sobre os cartões de crédito e de débito. Clicando sobre uma delas, será aberta uma lista com a possibilidade de adicionar, editar ou remover itens na respectiva aba aberta. Cada item da lista possuirá características, que serão preenchidas pelo usuário, como nome, descrição, data e valor.
+O programa será feito em Python e será utilizada a biblioteca Tkinter para confecção de sua interface gráfica. Ao realizar uma instalação padrão de Python, o Tkinter já deve ser instalado junto. Para confirmar, é possível verificar utilizando o seguinte comando no prompt de comando: “pip install tk”. Estando o Python e a biblioteca Tkinter devidamente instalados e prontos para uso, pode-se começar a criar a interface gráfica. Como exemplo, temos o seguinte código:
+
+import tkinter as tk
+
+#Criar a janela principal
+
+janela = tk.Tk() 
+
+
+#Definir o título da janela
+
+janela.title("Minha primeira aplicação Tkinter")
+
+
+#Tamanho da janela
+
+janela.geometry("400x300")
+
+#Iniciar o loop da aplicação
+
+janela.mainloop()
+
+
+Na imagem abaixo é possível ver a janela criada com o código acima.
+
+![image](https://github.com/user-attachments/assets/2cc58a60-19d3-46a4-ad6a-3e980d063aa5)
+
+
+
+
