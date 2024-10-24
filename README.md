@@ -6,10 +6,10 @@ Grupo: Luciano Damitz Pinheiro, Douglas Francisco Bolina Sibuya
 
 
 ## Diagrama de Classes
-![CLASS](.Imagens/Diagrama_de_Classe_e_Relacionamento.png)
+![image](.Imagens/Diagrama_de_Classe_e_Relacionamento.png)
 
 ## Fluxograma
-![CLASS](.Imagens/Fluxograma.drawio.png)
+![image](.Imagens/Fluxograma.drawio.png)
 
 ## Tutorial
 O programa será feito em Python e será utilizada a biblioteca Tkinter para confecção de sua interface gráfica. Ao realizar uma instalação padrão de Python, o Tkinter já deve ser instalado junto. Para confirmar, é possível verificar utilizando o seguinte comando no prompt de comando: “pip install tk”. Estando o Python e a biblioteca Tkinter devidamente instalados e prontos para uso, pode-se começar a criar a interface gráfica. Como exemplo, temos o seguinte código:
@@ -43,21 +43,21 @@ Na imagem abaixo é possível ver a janela criada com o código acima.
 ## Esboço GUI
 
 #### Tela de login
-![CLASS](.Imagens/Tela_Login.png)
+![image](.Imagens/Tela_Login.png)
 
 #### Menu
-![CLASS](.Imagens/Menu.png)
+![image](.Imagens/Menu.png)
 
 #### Lançamento de Despesas
-![CLASS](.Imagens/Lancar_despesa.png)
+![image](.Imagens/Lancar_despesa.png)
 
 #### Lançamento de Receitas
-![CLASS](.Imagens/Lancar_receitas.png)
+![image](.Imagens/Lancar_receitas.png)
 
 #### Gerenciamento de Cartões
-![CLASS](.Imagens/Gerenciar_cartões.png)
+![image](.Imagens/Gerenciar_cartões.png)
 
 #### Tela de dinheiro investido
-![CLASS](.Imagens/Dinheiro_Investido.png)
+![image](.Imagens/Dinheiro_Investido.png)
 
 
