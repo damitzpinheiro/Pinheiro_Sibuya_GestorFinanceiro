@@ -5,6 +5,12 @@ Grupo: Luciano Damitz Pinheiro, Douglas Francisco Bolina Sibuya
  - Motivação: Muitas pessoas têm dificuldade de gerir os seus recursos financeiros e com esse intuito projeto visa facilitar essa gestão de forma simplificada e descomplicada melhorando os hábitos financeiros e auxiliando para que os usuários realizem seus sonhos e atinjam seus objetivos.
 
 
+## Diagrama de Classes
+![CLASS](.Imagens/Diagrama_de_Classe_e_Relacionamento.png)
+
+## Fluxograma
+![CLASS](.Imagens/Fluxograma.drawio.png)
+
 ## Tutorial
 O programa será feito em Python e será utilizada a biblioteca Tkinter para confecção de sua interface gráfica. Ao realizar uma instalação padrão de Python, o Tkinter já deve ser instalado junto. Para confirmar, é possível verificar utilizando o seguinte comando no prompt de comando: “pip install tk”. Estando o Python e a biblioteca Tkinter devidamente instalados e prontos para uso, pode-se começar a criar a interface gráfica. Como exemplo, temos o seguinte código:
 
@@ -34,5 +40,24 @@ Na imagem abaixo é possível ver a janela criada com o código acima.
 ![image](https://github.com/user-attachments/assets/2cc58a60-19d3-46a4-ad6a-3e980d063aa5)
 
 
+## Esboço GUI
+
+#### Tela de login
+![CLASS](.Imagens/Tela_Login.png)
+
+#### Menu
+![CLASS](.Imagens/Menu.png)
+
+#### Lançamento de Despesas
+![CLASS](.Imagens/Lancar_despesa.png)
+
+#### Lançamento de Receitas
+![CLASS](.Imagens/Lancar_receitas.png)
+
+#### Gerenciamento de Cartões
+![CLASS](.Imagens/Gerenciar_cartões.png)
+
+#### Tela de dinheiro investido
+![CLASS](.Imagens/Dinheiro_Investido.png)
 
 
