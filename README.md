@@ -9,7 +9,7 @@ Grupo: Luciano Damitz Pinheiro, Douglas Francisco Bolina Sibuya
 ![image](.images/Diagrama_de_Classe_e_Relacionamento.png)
 
 ## Fluxograma
-![image](.images/Fluxograma.drawio.png)
+![image](.images/Fluxograma.png)
 
 ## Tutorial
 O programa será feito em Python e será utilizada a biblioteca Tkinter para confecção de sua interface gráfica. Ao realizar uma instalação padrão de Python, o Tkinter já deve ser instalado junto. Para confirmar, é possível verificar utilizando o seguinte comando no prompt de comando: “pip install tk”. Estando o Python e a biblioteca Tkinter devidamente instalados e prontos para uso, pode-se começar a criar a interface gráfica. Como exemplo, temos o seguinte código:
