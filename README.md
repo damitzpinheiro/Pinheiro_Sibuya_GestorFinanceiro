@@ -25,28 +25,28 @@ pip install customtkinter
 #### Criar a janela principal
 
 ```bash
-janela = ctk.CTk()\\
+janela = ctk.CTk()
 ```
 
 #### Definir o título da janela
 
 ```bash
-janela.title("Minha primeira aplicação CustomTkinter")\\
+janela.title("Minha primeira aplicação CustomTkinter")
 ```
 
 #### Tamanho da janela
 ```bash
-janela.geometry("400x300")\\
+janela.geometry("400x300")
 ```
 
 #### Adicionar um rótulo com uma mensagem
 ```bash
-label = ctk.CTkLabel(janela, text="Olá, CustomTkinter!", font=("Arial", 20))\\
-label.pack(pady=20)\\
+label = ctk.CTkLabel(janela, text="Olá, CustomTkinter!", font=("Arial", 20))
+label.pack(pady=20)
 ```
 #### Iniciar o loop da aplicação
 ```bash
-janela.mainloop()\\
+janela.mainloop()
 ```
 
 ![image](.images/tutorial_janela.png)
@@ -54,54 +54,54 @@ janela.mainloop()\\
 #### Configurar o layout da janela para centralizar os widgets
 Para centralizar os widgets na janela, configure o layout utilizando grid_rowconfigure e grid_columnconfigure: \\
 ```bash
-janela.grid_rowconfigure(0, weight=1) \\
-janela.grid_rowconfigure(1, weight=1) \\
-janela.grid_rowconfigure(2, weight=1) \\
-janela.grid_rowconfigure(3, weight=1) \\
-janela.grid_columnconfigure(0, weight=1) \\
+janela.grid_rowconfigure(0, weight=1) 
+janela.grid_rowconfigure(1, weight=1) 
+janela.grid_rowconfigure(2, weight=1) 
+janela.grid_rowconfigure(3, weight=1) 
+janela.grid_columnconfigure(0, weight=1) 
 ```
 
 #### Adicionar um botão
 Adicione um botão que executa uma função quando clicado: \\
 ```bash
-def funcao_exemplo():\\
-print("Botão clicado!")
+def funcao_exemplo():
+    print("Botão clicado!")
 
-botao = ctk.CTkButton(janela, text="Clique Aqui", command=funcao_exemplo)\\
-botao.pack(pady=10)\\
+botao = ctk.CTkButton(janela, text="Clique Aqui", command=funcao_exemplo)
+botao.pack(pady=10)
 ```
 
 #### Adicionar uma entrada de texto
 Inclua um campo de entrada de texto para que o usuário possa digitar informações:\\
 ```bash
-entrada = ctk.CTkEntry(janela, placeholder_text="Digite algo aqui")\\
-entrada.pack(pady=10)\\
+entrada = ctk.CTkEntry(janela, placeholder_text="Digite algo aqui")
+entrada.pack(pady=10)
 ```
 
 #### Adicionar uma caixa de seleção
 Adicione uma caixa de seleção para opções adicionais:\\
 ```bash
-checkbox = ctk.CTkCheckBox(janela, text="Opção")\\
-checkbox.pack(pady=10)\\
+checkbox = ctk.CTkCheckBox(janela, text="Opção")
+checkbox.pack(pady=10)
 ```
 
 #### Usando grid para posicionamento mais preciso
 Utilize o método grid para posicionar widgets de forma mais precisa na janela:\\
 ```bash
-label.grid(row=0, column=0, padx=10, pady=10)\\
-botao.grid(row=1, column=0, padx=10, pady=10)\\
+label.grid(row=0, column=0, padx=10, pady=10)
+botao.grid(row=1, column=0, padx=10, pady=10)
 ```
 
 #### Definir o modo de aparência: 'light', 'dark', ou 'system'
 Escolha entre os modos de aparência disponíveis: 'light', 'dark' ou 'system' (que segue a configuração do sistema operacional).\\
 ```bash
-ctk.set_appearance_mode("dark")\\
+ctk.set_appearance_mode("dark")
 ```
 
 #### Definir o tema de cor: 'blue', 'green', 'dark-blue'
 Selecione o tema de cor desejado, como 'blue', 'green', 'dark-blue', entre outros.\\
 ```bash
-ctk.set_default_color_theme("blue")\\
+ctk.set_default_color_theme("blue")
 ```
 
 ![image](.images/Tutorial_botoes.png)
