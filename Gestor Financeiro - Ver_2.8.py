@@ -664,14 +664,14 @@ class FrameMoney(ctk.CTkFrame):
                 self.dados_investimentos.append((data_formatada, valor_float, rendimento_anual))
                 self.atualizar_grafico()
 
-                # Atualizar o total investido
-                total_investido = sum([inv[1] for inv in self.dados_investimentos])
-                self.lb_total_investido.configure(text=f"Total Investido: R$ {total_investido:.2f}")
+                # Atualizar o total investido + rendimento
+                total_investido = sum(inv[1] * (1 + inv[2]/100) for inv in self.dados_investimentos)
+                self.lb_total_investido.configure(text=f"Total Investido + Rendimento: R$ {total_investido:.2f}")
 
                 # Limpa os campos de entrada
-                self.entrada_valor_money.delete(0, tk.END)
-                self.entrada_rendimento_money.delete(0, tk.END)
-                self.entrada_data_money.delete(0, tk.END)
+                self.entrada_valor_money.delete(0, ctk.END)
+                self.entrada_rendimento_money.delete(0, ctk.END)
+                self.entrada_data_money.delete(0, ctk.END)
             except ValueError:
                 messagebox.showerror("Erro", "Por favor, insira valores numéricos válidos para o valor e rendimento.")
             except Exception as e:
@@ -727,9 +727,9 @@ class FrameMoney(ctk.CTkFrame):
             self.ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))
             plt.setp(self.ax.get_xticklabels(), rotation=45, ha='right')
 
-            # Atualizar total investido exibido
+            # Atualizar total investido + rendimento exibido
             total_investido = valores_mensais[-1]
-            self.lb_total_investido.configure(text=f"Total Investido: R$ {total_investido:.2f}")
+            self.lb_total_investido.configure(text=f"Total Investido + Rendimento: R$ {total_investido:.2f}")
 
         self.canvas.draw()
 
