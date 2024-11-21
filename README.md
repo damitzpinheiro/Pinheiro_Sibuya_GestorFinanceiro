@@ -17,48 +17,57 @@ O programa será feito em Python e será utilizada a biblioteca CustomTkinter pa
 import tkinter as tk
 import customtkinter as ctk
 
-### Criar a janela principal
+#### Criar a janela principal
 janela = ctk.CTk()
 
-### Definir o título da janela
+#### Definir o título da janela
 janela.title("Minha primeira aplicação CustomTkinter")
 
-### Tamanho da janela
+#### Tamanho da janela
 janela.geometry("400x300")
 
-### Adicionar um rótulo com uma mensagem
+#### Adicionar um rótulo com uma mensagem
 label = ctk.CTkLabel(janela, text="Olá, CustomTkinter!", font=("Arial", 20))
 label.pack(pady=20)
 
-### Iniciar o loop da aplicação
+#### Iniciar o loop da aplicação
 janela.mainloop()
 
-### Adicionar um botão
+![image](.images/tutorial_janela.png)
+
+#### Configurar o layout da janela para centralizar os widgets
+janela.grid_rowconfigure(0, weight=1)
+janela.grid_rowconfigure(1, weight=1)
+janela.grid_rowconfigure(2, weight=1)
+janela.grid_rowconfigure(3, weight=1)
+janela.grid_columnconfigure(0, weight=1)
+
+#### Adicionar um botão
 def funcao_exemplo():
     print("Botão clicado!")
 
 botao = ctk.CTkButton(janela, text="Clique Aqui", command=funcao_exemplo)
 botao.pack(pady=10)
 
-### Adicionar uma entrada de texto
+#### Adicionar uma entrada de texto
 entrada = ctk.CTkEntry(janela, placeholder_text="Digite algo aqui")
 entrada.pack(pady=10)
 
-### Adicionar uma caixa de seleção
+#### Adicionar uma caixa de seleção
 checkbox = ctk.CTkCheckBox(janela, text="Opção")
 checkbox.pack(pady=10)
 
-### Usando grid para posicionamento mais preciso
+#### Usando grid para posicionamento mais preciso
 label.grid(row=0, column=0, padx=10, pady=10)
 botao.grid(row=1, column=0, padx=10, pady=10)
 
-### Definir o modo de aparência: 'light', 'dark', ou 'system'
+#### Definir o modo de aparência: 'light', 'dark', ou 'system'
 ctk.set_appearance_mode("dark")
 
-### Definir o tema de cor: 'blue', 'green', 'dark-blue'
+#### Definir o tema de cor: 'blue', 'green', 'dark-blue'
 ctk.set_default_color_theme("blue")
 
-![image](https://github.com/user-attachments/assets/2cc58a60-19d3-46a4-ad6a-3e980d063aa5)
+![image](.images/Tutorial_botoes.png)
 
 
 ## Esboço GUI
