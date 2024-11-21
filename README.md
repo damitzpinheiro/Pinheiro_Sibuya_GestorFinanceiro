@@ -14,58 +14,95 @@ Grupo: Luciano Damitz Pinheiro, Douglas Francisco Bolina Sibuya
 ## Tutorial
 O programa será feito em Python e será utilizada a biblioteca CustomTkinter para confecção de sua interface gráfica. Para realizar a instalação do CustomTkinter pode-se utilizar o seguinte comando no prompt de comando: “pip install customtkinter”. Estando o Python e a biblioteca CustomTkinter devidamente instalados e prontos para uso, pode-se começar a criar a interface gráfica. Como exemplo, temos o seguinte código:
 
-import tkinter as tk
-import customtkinter as ctk
+### Instalação
+
+Para instalar o CustomTkinter, utilize o seguinte comando no prompt de comando:
+
+```bash
+pip install customtkinter 
+```
 
 #### Criar a janela principal
-janela = ctk.CTk()
+
+```bash
+janela = ctk.CTk()\\
+```
 
 #### Definir o título da janela
-janela.title("Minha primeira aplicação CustomTkinter")
+
+```bash
+janela.title("Minha primeira aplicação CustomTkinter")\\
+```
 
 #### Tamanho da janela
-janela.geometry("400x300")
+```bash
+janela.geometry("400x300")\\
+```
 
 #### Adicionar um rótulo com uma mensagem
-label = ctk.CTkLabel(janela, text="Olá, CustomTkinter!", font=("Arial", 20))
-label.pack(pady=20)
-
+```bash
+label = ctk.CTkLabel(janela, text="Olá, CustomTkinter!", font=("Arial", 20))\\
+label.pack(pady=20)\\
+```
 #### Iniciar o loop da aplicação
-janela.mainloop()
+```bash
+janela.mainloop()\\
+```
 
 ![image](.images/tutorial_janela.png)
 
 #### Configurar o layout da janela para centralizar os widgets
-janela.grid_rowconfigure(0, weight=1)
-janela.grid_rowconfigure(1, weight=1)
-janela.grid_rowconfigure(2, weight=1)
-janela.grid_rowconfigure(3, weight=1)
-janela.grid_columnconfigure(0, weight=1)
+Para centralizar os widgets na janela, configure o layout utilizando grid_rowconfigure e grid_columnconfigure: \\
+```bash
+janela.grid_rowconfigure(0, weight=1) \\
+janela.grid_rowconfigure(1, weight=1) \\
+janela.grid_rowconfigure(2, weight=1) \\
+janela.grid_rowconfigure(3, weight=1) \\
+janela.grid_columnconfigure(0, weight=1) \\
+```
 
 #### Adicionar um botão
-def funcao_exemplo():
-    print("Botão clicado!")
+Adicione um botão que executa uma função quando clicado: \\
+```bash
+def funcao_exemplo():\\
+print("Botão clicado!")
 
-botao = ctk.CTkButton(janela, text="Clique Aqui", command=funcao_exemplo)
-botao.pack(pady=10)
+botao = ctk.CTkButton(janela, text="Clique Aqui", command=funcao_exemplo)\\
+botao.pack(pady=10)\\
+```
 
 #### Adicionar uma entrada de texto
-entrada = ctk.CTkEntry(janela, placeholder_text="Digite algo aqui")
-entrada.pack(pady=10)
+Inclua um campo de entrada de texto para que o usuário possa digitar informações:\\
+```bash
+entrada = ctk.CTkEntry(janela, placeholder_text="Digite algo aqui")\\
+entrada.pack(pady=10)\\
+```
 
 #### Adicionar uma caixa de seleção
-checkbox = ctk.CTkCheckBox(janela, text="Opção")
-checkbox.pack(pady=10)
+Adicione uma caixa de seleção para opções adicionais:\\
+```bash
+checkbox = ctk.CTkCheckBox(janela, text="Opção")\\
+checkbox.pack(pady=10)\\
+```
 
 #### Usando grid para posicionamento mais preciso
-label.grid(row=0, column=0, padx=10, pady=10)
-botao.grid(row=1, column=0, padx=10, pady=10)
+Utilize o método grid para posicionar widgets de forma mais precisa na janela:\\
+```bash
+label.grid(row=0, column=0, padx=10, pady=10)\\
+botao.grid(row=1, column=0, padx=10, pady=10)\\
+```
 
 #### Definir o modo de aparência: 'light', 'dark', ou 'system'
-ctk.set_appearance_mode("dark")
+Escolha entre os modos de aparência disponíveis: 'light', 'dark' ou 'system' (que segue a configuração do sistema operacional).\\
+```bash
+ctk.set_appearance_mode("dark")\\
+```
 
 #### Definir o tema de cor: 'blue', 'green', 'dark-blue'
-ctk.set_default_color_theme("blue")
+Selecione o tema de cor desejado, como 'blue', 'green', 'dark-blue', entre outros.\\
+```bash
+ctk.set_default_color_theme("blue")\\
+```
 
 ![image](.images/Tutorial_botoes.png)
 
