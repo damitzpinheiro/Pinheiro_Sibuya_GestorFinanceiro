@@ -12,30 +12,51 @@ Grupo: Luciano Damitz Pinheiro, Douglas Francisco Bolina Sibuya
 ![image](.images/Fluxograma.png)
 
 ## Tutorial
-O programa será feito em Python e será utilizada a biblioteca Tkinter para confecção de sua interface gráfica. Ao realizar uma instalação padrão de Python, o Tkinter já deve ser instalado junto. Para confirmar, é possível verificar utilizando o seguinte comando no prompt de comando: “pip install tk”. Estando o Python e a biblioteca Tkinter devidamente instalados e prontos para uso, pode-se começar a criar a interface gráfica. Como exemplo, temos o seguinte código:
+O programa será feito em Python e será utilizada a biblioteca CustomTkinter para confecção de sua interface gráfica. Para realizar a instalação do CustomTkinter pode-se utilizar o seguinte comando no prompt de comando: “pip install customtkinter”. Estando o Python e a biblioteca CustomTkinter devidamente instalados e prontos para uso, pode-se começar a criar a interface gráfica. Como exemplo, temos o seguinte código:
 
 import tkinter as tk
+import customtkinter as ctk
 
-#Criar a janela principal
+### Criar a janela principal
+janela = ctk.CTk()
 
-janela = tk.Tk() 
+### Definir o título da janela
+janela.title("Minha primeira aplicação CustomTkinter")
 
-
-#Definir o título da janela
-
-janela.title("Minha primeira aplicação Tkinter")
-
-
-#Tamanho da janela
-
+### Tamanho da janela
 janela.geometry("400x300")
 
-#Iniciar o loop da aplicação
+### Adicionar um rótulo com uma mensagem
+label = ctk.CTkLabel(janela, text="Olá, CustomTkinter!", font=("Arial", 20))
+label.pack(pady=20)
 
+### Iniciar o loop da aplicação
 janela.mainloop()
 
+### Adicionar um botão
+def funcao_exemplo():
+    print("Botão clicado!")
 
-Na imagem abaixo é possível ver a janela criada com o código acima.
+botao = ctk.CTkButton(janela, text="Clique Aqui", command=funcao_exemplo)
+botao.pack(pady=10)
+
+### Adicionar uma entrada de texto
+entrada = ctk.CTkEntry(janela, placeholder_text="Digite algo aqui")
+entrada.pack(pady=10)
+
+### Adicionar uma caixa de seleção
+checkbox = ctk.CTkCheckBox(janela, text="Opção")
+checkbox.pack(pady=10)
+
+### Usando grid para posicionamento mais preciso
+label.grid(row=0, column=0, padx=10, pady=10)
+botao.grid(row=1, column=0, padx=10, pady=10)
+
+### Definir o modo de aparência: 'light', 'dark', ou 'system'
+ctk.set_appearance_mode("dark")
+
+### Definir o tema de cor: 'blue', 'green', 'dark-blue'
+ctk.set_default_color_theme("blue")
 
 ![image](https://github.com/user-attachments/assets/2cc58a60-19d3-46a4-ad6a-3e980d063aa5)
 
