@@ -8,16 +8,6 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import datetime
 import matplotlib.dates as mdates
 
-import customtkinter as ctk
-import tkinter as tk
-from tkinter import messagebox
-import sqlite3
-import bcrypt
-import matplotlib.pyplot as plt 
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg 
-import datetime
-import matplotlib.dates as mdates
-
 class FrameLogin(ctk.CTkFrame):
     def __init__(self, master, conn, cursor):
         super().__init__(master)
