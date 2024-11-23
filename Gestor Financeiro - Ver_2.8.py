@@ -595,8 +595,6 @@ class FrameDespesas(ctk.CTkFrame):
             self.ax.set_title("Despesas Mensais")
         self.canvas.draw()
 
-
-
 class FrameMoney(ctk.CTkFrame):
     def __init__(self, master, conn, cursor):
         super().__init__(master)
@@ -604,6 +602,9 @@ class FrameMoney(ctk.CTkFrame):
         self.conn = conn
         self.cursor = cursor
         self.place(relx=0.0, rely=0.0, relwidth=1, relheight=1)
+        
+        # Criar tabela se não existir
+        self.criar_tabela_money()
         
         # Formatar campos de data automaticamente
         self.data_var = tk.StringVar()
@@ -644,6 +645,23 @@ class FrameMoney(ctk.CTkFrame):
         # Armazenar dados dos investimentos
         self.dados_investimentos = []
 
+        # Carregar dados do banco de dados
+        self.carregar_dados()
+
+    def criar_tabela_money(self):
+        try:
+            self.cursor.execute('''
+                CREATE TABLE IF NOT EXISTS money (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    valor REAL NOT NULL,
+                    rendimento REAL NOT NULL,
+                    data TEXT NOT NULL
+                )
+            ''')
+            self.conn.commit()
+        except Exception as e:
+            messagebox.showerror("Erro", str(e))
+
     def lancar_money(self):
         valor = self.entrada_valor_money.get().strip()
         rendimento = self.entrada_rendimento_money.get().strip()
@@ -655,10 +673,10 @@ class FrameMoney(ctk.CTkFrame):
                 rendimento_anual = float(rendimento)
                 data_formatada = datetime.datetime.strptime(data, "%d/%m/%Y").date()
                 
-                # Inserir no banco de dados (exemplo, ajuste conforme necessário)
-                # self.cursor.execute("INSERT INTO money (valor, rendimento, data) VALUES (?, ?, ?)", 
-                #                     (valor_float, rendimento_anual, data_formatada.strftime("%d/%m/%Y")))
-                # self.conn.commit()
+                # Inserir no banco de dados
+                self.cursor.execute("INSERT INTO money (valor, rendimento, data) VALUES (?, ?, ?)", 
+                                    (valor_float, rendimento_anual, data_formatada.strftime("%d/%m/%Y")))
+                self.conn.commit()
 
                 # Armazenar os dados do investimento
                 self.dados_investimentos.append((data_formatada, valor_float, rendimento_anual))
@@ -678,6 +696,17 @@ class FrameMoney(ctk.CTkFrame):
                 messagebox.showerror("Erro", str(e))
         else:
             messagebox.showwarning("Atenção", "Por favor, preencha todos os campos.")
+
+    def carregar_dados(self):
+        try:
+            self.cursor.execute("SELECT valor, rendimento, data FROM money")
+            rows = self.cursor.fetchall()
+            for row in rows:
+                data_formatada = datetime.datetime.strptime(row[2], "%d/%m/%Y").date()
+                self.dados_investimentos.append((data_formatada, row[0], row[1]))
+            self.atualizar_grafico()
+        except Exception as e:
+            messagebox.showerror("Erro", str(e))
 
     def atualizar_grafico(self):
         self.ax.clear()
@@ -732,7 +761,6 @@ class FrameMoney(ctk.CTkFrame):
             self.lb_total_investido.configure(text=f"Total Investido + Rendimento: R$ {total_investido:.2f}")
 
         self.canvas.draw()
-
 
 class FrameCard(ctk.CTkFrame):
     def __init__(self, master, conn, cursor):

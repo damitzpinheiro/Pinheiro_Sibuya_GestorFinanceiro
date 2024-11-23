@@ -2,8 +2,7 @@
 Grupo: Luciano Damitz Pinheiro, Douglas Francisco Bolina Sibuya
  - Conceito: Desenvolver uma aplicação para realizar gestão financeira de modo a auxiliar o usuário a tomar decisões mais conscientes sobre seu dinheiro de forma intuitiva e que seja de fácil utilização. 
  - Função: O programa possuirá mecanismo para registrar de despesas, receitas, dinheiro guardado, programa de pontos, informações sobre os cartões de crédito e de débito e investimentos. A ferramenta também fornecerá visualizações com gráficos diários, semanais, mensais e anuais informando como o dinheiro está sendo usado, facilitando o usuário a ter consciência sobre como utilizar melhor seu dinheiro e tomar decisões sobre sua vida financeira a curto e a longo prazo de  modo a auxiliar o usuário a atingir seus objetivos. 
- - Motivação: Muitas pessoas têm dificuldade de gerir os seus recursos financeiros e com esse intuito projeto visa facilitar essa gestão de forma simplificada e descomplicada melhorando os hábitos financeiros e auxiliando para que os usuários realizem seus sonhos e atinjam seus objetivos.
-
+ - Motivação: Muitas pessoas têm dificuldade de gerir os seus recursos financeiros e, com esse intuito, o projeto visa facilitar essa gestão de forma simplificada e descomplicada, melhorando os hábitos financeiros e auxiliando para que os usuários realizem seus sonhos e atinjam seus objetivos. O programa se destaca de outros no mercado por possuir um banco de dados local, permitindo que ele seja utilizado offline, garantindo acessibilidade e segurança dos dados mesmo sem conexão com a internet.
 
 ## Diagrama de Classes
 ![image](.images/Diagrama_de_Classe_e_Relacionamento.png)
